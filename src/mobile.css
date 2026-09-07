@@ -37,7 +37,7 @@ body.touch-active #reload-hint{font-size:7px;letter-spacing:0}
 body.touch-active #sector-map{top:calc(var(--edge-top) + 56px);right:var(--edge-right);bottom:auto;width:106px;padding:6px;background:#071619a6;}
 body.touch-active #sector-map>span{font-size:5px;letter-spacing:0}
 body.touch-active .objective{display:none}
-body.touch-active #touch-controls button{z-index:2;width:54px;height:54px;border-radius:16px;background:#0c1d25b5;border:1px solid #b8d0c766;font-size:24px;box-shadow:0 2px 12px #0003;}
+body.touch-active #touch-controls button{z-index:2;width:54px;height:54px;border-radius:16px;background:#0c1d25b5;border:1px solid #b8d0c766;font-size:24px;box-shadow:0 2px 12px #0003;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;}
 body.touch-active #touch-controls button small{font:8px 'Barlow',sans-serif;font-weight:600;letter-spacing:.6px;margin-top:2px;}
 body.touch-active #touch-fire{right:var(--edge-right);bottom:calc(var(--edge-bottom) + 76px);width:76px!important;height:76px!important;font-size:34px!important;border-radius:50%;background:#142b29c2;}
 body.touch-active #touch-ads{right:calc(var(--edge-right) + 91px);bottom:calc(var(--edge-bottom) + 88px);}
