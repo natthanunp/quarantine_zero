@@ -16,6 +16,7 @@ export class Controls {
     window.addEventListener('blur', () => { this.clear(); if (this.active) callbacks.pause(); });
     document.addEventListener('visibilitychange', () => { if (document.hidden && this.active) { this.clear(); callbacks.pause(); } });
     this.moveArea('touch-move-area');this.lookArea('touch-look-area');this.lookArea('touch-fire',true);
+    const touchControls=document.getElementById('touch-controls');touchControls.addEventListener('touchstart',e=>e.preventDefault(),{passive:false});
      const aim=document.getElementById('touch-ads');aim.setAttribute('aria-pressed','false');aim.addEventListener('pointerdown',e=>{e.preventDefault();if(!this.active)return;this.ads=!this.ads;aim.setAttribute('aria-pressed',String(this.ads));});
     document.querySelector('#touch-reload').onclick = () => callbacks.reload(); this.hold('touch-interact',v=>{this.use=v;if(v)callbacks.interact();});
   }
